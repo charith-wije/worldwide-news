@@ -3,6 +3,9 @@
 # dependencies
 node_modules/
 
+# files
+src/constants/
+
 # Expo
 .expo/
 dist/
