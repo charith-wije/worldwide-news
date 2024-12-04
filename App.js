@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import AuthNavigator from "./src/navigation/AuthNavigator";
 import { NavigationContainer } from "@react-navigation/native";
 import { SQLiteProvider, useSQLiteContext } from "expo-sqlite";
+import MainNavigator from "./src/navigation/MainNavigator";
 
 export default function App() {
   // Initialize database
@@ -31,7 +32,7 @@ export default function App() {
       onInit={initializeDatabase}
     >
       <NavigationContainer>
-        <AuthNavigator />
+        <MainNavigator />
       </NavigationContainer>
     </SQLiteProvider>
   );
