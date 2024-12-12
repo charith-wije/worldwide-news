@@ -10,6 +10,7 @@ export const getNews = createAsyncThunk(
         endpoint === "everything"
           ? `${API.BASE_URL}/everything`
           : `${API.BASE_URL}/top-headlines`;
+      console.log(url, params);
       const { data } = await axios.get(url, {
         params: params,
         headers: {
@@ -17,8 +18,11 @@ export const getNews = createAsyncThunk(
         },
       });
       return data;
-    } catch (err) {
-      console.log(err);
+    } catch (error) {
+      console.log(
+        "Error:",
+        error.response ? error.response.data : error.message
+      );
     }
   }
 );

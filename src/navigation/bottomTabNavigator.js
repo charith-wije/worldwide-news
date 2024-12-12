@@ -6,6 +6,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 // Screens
 import BookmarksScreen from "../components/screens/bottomTabScreens/BookmarksScreen";
 import Categoriesscreen from "../components/screens/bottomTabScreens/CategoriesScreen";
+import CategoryStackNavigator from "./CategoryStackNavigator";
 import HeadLinesScreen from "../components/screens/bottomTabScreens/HeadLinesScreen";
 import ProfileScreen from "../components/screens/bottomTabScreens/ProfileScreen";
 
@@ -45,7 +46,7 @@ const BottomTabNavigator = () => {
         },
         tabBarActiveTintColor: "#efb810",
         tabBarInactiveTintColor: "white",
-        tabBarStyle: { backgroundColor: "#011f8c" },
+        tabBarStyle: { backgroundColor: "#14193b" },
         headerTitleAlign: "center",
         headerShown: false,
       })}
@@ -59,7 +60,7 @@ const BottomTabNavigator = () => {
       />
       <BottomTab.Screen
         name={catagoriesName}
-        component={Categoriesscreen}
+        component={CategoryStackNavigator}
         // options={{
         //   headerTitle: () => <MatchesScreenHeader />,
         //   headerLeft: () => (
